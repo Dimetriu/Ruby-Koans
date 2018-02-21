@@ -33,6 +33,10 @@ class AboutNil < Neo::Koan
     # or
     #    obj == nil
     # Why?
+    
+    # Effectively they are the same
+    # But obj.nil? is a bit faster according to benchmarks
+    # https://stackoverflow.com/questions/1972266/obj-nil-vs-obj-nil
   end
 
 end
