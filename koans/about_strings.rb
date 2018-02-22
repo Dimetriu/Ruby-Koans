@@ -147,9 +147,11 @@ EOS
 
   def test_you_can_get_a_single_character_from_a_string
     string = "Bacon, lettuce and tomato"
-    assert_equal __, string[1]
+    assert_equal "a", string[1]
 
     # Surprised?
+    # Not so much man, strings are collections of characters, so
+    # these can behave like array sometimes
   end
 
   in_ruby_version("1.8") do
