@@ -44,13 +44,14 @@ class AboutHashes < Neo::Koan
 
     # Bonus Question: Why was "expected" broken out into a variable
     # rather than used as a literal?
+    # Just to show us that hash has been mutated
   end
 
   def test_hash_is_unordered
     hash1 = { :one => "uno", :two => "dos" }
     hash2 = { :two => "dos", :one => "uno" }
 
-    assert_equal __, hash1 == hash2
+    assert_equal true, hash1 == hash2
   end
 
   def test_hash_keys
