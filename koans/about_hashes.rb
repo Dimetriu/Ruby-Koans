@@ -30,6 +30,9 @@ class AboutHashes < Neo::Koan
     # THINK ABOUT IT:
     #
     # Why might you want to use #fetch instead of #[] when accessing hash keys?
+    # Sometimes hashes can be like {:key => nil}, so if we want to get exact
+    # key value we should use #fetch, it raises KeyError unless key
+    # not found while #[] returns just nil without any exception
   end
 
   def test_changing_hashes
