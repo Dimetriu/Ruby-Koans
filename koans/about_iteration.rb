@@ -89,6 +89,9 @@ class AboutIteration < Neo::Koan
 
     # Extra Credit:
     # Describe in your own words what inject does.
+    # Inject is an alias for reduce, it accumulates each value of an
+    # enumerator and uses it with some binary operator for the next
+    # iteration 
   end
 
   def test_all_iteration_methods_work_on_any_collection_not_just_arrays
