@@ -33,6 +33,7 @@ class AboutRegularExpressions < Neo::Koan
     # THINK ABOUT IT:
     #
     # When would * fail to match?
+    # Since * will always accept the empty string, it will only fail if you have something before or after it that doesn't match. For example, ab*c will fail to match azc, since b* will not match z and c will not match zc.
   end
 
   # THINK ABOUT IT:
@@ -41,10 +42,12 @@ class AboutRegularExpressions < Neo::Koan
   #
   # Why?
 
-  # ------------------------------------------------------------------
+  # # The * is used to match and return as many possible characters from the input. Have 
+  # to be careful when using this as since it'll grab as much data as it can you might 
+  # end up with more than what you want. Performs a lot of backtracking to get result.
 
   def test_the_left_most_match_wins
-    assert_equal __, "abbccc az"[/az*/]
+    assert_equal "a", "abbccc az"[/az*/]
   end
 
   # ------------------------------------------------------------------
