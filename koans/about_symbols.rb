@@ -32,6 +32,7 @@ class AboutSymbols < Neo::Koan
   #
   # Why do we convert the list of symbols to strings and then compare
   # against the string value rather than against symbols?
+  # Lets just imagine the simple test :test == "test", it will be false. So, if we were to gather all of the symbols defined thus far into an array, we would need to convert them to strings first before comparing them.
 
   in_ruby_version("mri") do
     RubyConstant = "What is the sound of one hand clapping?"
