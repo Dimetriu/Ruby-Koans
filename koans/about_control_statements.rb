@@ -36,13 +36,14 @@ class AboutControlStatements < Neo::Koan
 
     # NOTE: Actually, EVERY statement in Ruby will return a value, not
     # just if statements.
+    # That`s done
   end
 
   def test_if_statements_with_no_else_with_false_condition_return_value
     value = if false
               :true_value
             end
-    assert_equal __, value
+    assert_equal nil, value
   end
 
   def test_condition_operators
