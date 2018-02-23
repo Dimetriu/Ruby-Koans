@@ -14,8 +14,8 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  a, b, c = sides = [a, b, c].sort
-  raise TriangleError unless (a > 0) && (a + b) > c
+  sides = [a, b, c].sort
+  raise TriangleError unless (sides.first > 0) && ((sides[0...-1].reduce(:+)) > sides.last)
   %i{scalene isosceles equilateral}[-sides.uniq.size]
   # raise TriangleError if (a || b || c) == 0
   # if a == (b & c)
