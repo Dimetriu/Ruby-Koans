@@ -83,10 +83,11 @@ class AboutSymbols < Neo::Koan
   # It's important to realize that symbols are not "immutable
   # strings", though they are immutable. None of the
   # interesting string operations are available on symbols.
+  # That`s cause a symbol is a single internal object unlike a string??
 
   def test_symbols_cannot_be_concatenated
     # Exceptions will be pondered further down the path
-    assert_raise(___) do
+    assert_raise(NoMethodError) do
       :cats + :dogs
     end
   end
