@@ -27,5 +27,7 @@ class AboutKeywordArguments < Neo::Koan
   # THINK ABOUT IT:
   #
   # Keyword arguments always have a default value, making them optional to the caller
-
+  # Yep, but just rubies under 2.1, so
+  # Ruby 2.1 introduced required keyword arguments, which are defined with a trailing colon:
+  # If a required keyword argument is missing, Ruby will raise a useful ArgumentError that tells us which required argument we must include.
 end
