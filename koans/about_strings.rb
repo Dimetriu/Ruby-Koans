@@ -184,11 +184,12 @@ EOS
     # NOTE: Patterns are formed from Regular Expressions.  Ruby has a
     # very powerful Regular Expression library.  We will become
     # enlightened about them soon.
+    # Thanks! :*
   end
 
   def test_strings_can_be_joined
     words = ["Now", "is", "the", "time"]
-    assert_equal __, words.join(" ")
+    assert_equal "Now is the time", words.join(" ")
   end
 
   def test_strings_are_unique_objects
