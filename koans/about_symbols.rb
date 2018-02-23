@@ -99,4 +99,5 @@ class AboutSymbols < Neo::Koan
   # THINK ABOUT IT:
   #
   # Why is it not a good idea to dynamically create a lot of symbols?
+  # Because If you dynamically create lots of symbols, you are allocating a lot of memory that can't be freed until your program ends.
 end
