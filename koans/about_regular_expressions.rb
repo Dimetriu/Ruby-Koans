@@ -147,6 +147,9 @@ class AboutRegularExpressions < Neo::Koan
   # THINK ABOUT IT:
   #
   # Explain the difference between a character class ([...]) and alternation (|).
+  # Character classes ([...]) are optimized for matching 
+  # one out of some set of characters, and alternatives (x|y) 
+  # allow for more general choices of varying lengths.
 
   # ------------------------------------------------------------------
 
