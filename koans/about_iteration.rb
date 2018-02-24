@@ -90,14 +90,13 @@ class AboutIteration < Neo::Koan
     # Extra Credit:
     # Describe in your own words what inject does.
     # Inject is an alias for reduce, it accumulates each value of an
-    # enumerator and uses it with some binary operator for the next
-    # iteration 
+    # enumerator and yields the rest of the block between iterations 
   end
 
   def test_all_iteration_methods_work_on_any_collection_not_just_arrays
     # Ranges act like a collection
     result = (1..3).map { |item| item + 10 }
-    assert_equal __, result
+    assert_equal [11, 12, 13], result
 
     # Files act like a collection of lines
     File.open("example_file.txt") do |file|
