@@ -3,16 +3,36 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # Implement a DiceSet Class here:
 #
 class DiceSet
-  attr_reader :values
+  attr_reader :values, :rolls
   def initialize
-    @values = []
+    @values = @rolls ||= []
   end
 
-  def roll(elements)
+  def roll(dice)
     return "shold be an array" unless values.is_a? Array
-    @values = (1..elements).to_a
-    return "value #{elements} must be between 1 and 6" unless (1..6).include? elements
+    @rolls << values
+    @values = [*(1..dice)].shuffle
+    return "value #{dice} must be between 1 and 6" unless valid_dice(dice)
+    return equivalence_failure unless first_time_rolled?
     values
+  end
+
+  def first_time_rolled?
+    rolls.empty?
+  end
+
+private
+
+  def valid_array
+    values.is_a? Array
+  end
+  
+  def valid_dice(dice)
+    (1..6).include? dice
+  end
+  
+  def equivalence_failure
+    "Two rolls should not be equal"
   end
 end
 
@@ -58,6 +78,9 @@ class AboutDiceProject < Neo::Koan
     # If the rolls are random, then it is possible (although not
     # likely) that two consecutive rolls are equal.  What would be a
     # better way to test this?
+    # I`ve created #first_time_rolled? and pull @rolls on the top
+    # of #roll that copies the array of values. Method checks if
+    # it has been ran first time or not
   end
 
   def test_you_can_roll_different_numbers_of_dice
