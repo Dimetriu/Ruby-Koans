@@ -70,7 +70,8 @@ class AboutMessagePassing < Neo::Koan
   # the object. We use "send" when the name of the message can vary
   # dynamically (e.g. calculated at run time), but by far the most
   # common way of sending a message is just to say: obj.msg.
-
+  # Cause it`s still faster
+  
   # ------------------------------------------------------------------
 
   class TypicalObject
