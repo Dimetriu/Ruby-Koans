@@ -158,7 +158,8 @@ class AboutClassMethods < Neo::Koan
   #
   # Which do you prefer and why?
   # Are there times you might prefer one over the other?
-
+  # I prefer class << self over self.method beacuse of
+  # preferable readability and rails best practices ^
   # ------------------------------------------------------------------
 
   def test_heres_an_easy_way_to_call_class_methods_from_instance_methods
