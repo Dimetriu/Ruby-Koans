@@ -71,7 +71,7 @@ class AboutMessagePassing < Neo::Koan
   # dynamically (e.g. calculated at run time), but by far the most
   # common way of sending a message is just to say: obj.msg.
   # Cause it`s still faster
-  
+
   # ------------------------------------------------------------------
 
   class TypicalObject
@@ -80,7 +80,7 @@ class AboutMessagePassing < Neo::Koan
   def test_sending_undefined_messages_to_a_typical_object_results_in_errors
     typical = TypicalObject.new
 
-    exception = assert_raise(___) do
+    exception = assert_raise(NoMethodError) do
       typical.foobar
     end
     assert_match(/foobar/, exception.message)
