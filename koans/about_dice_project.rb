@@ -3,8 +3,16 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # Implement a DiceSet Class here:
 #
 class DiceSet
+  attr_reader :values
   def initialize
-    
+    @values = []
+  end
+
+  def roll(elements)
+    return "shold be an array" unless values.is_a? Array
+    @values = (1..elements).to_a
+    return "value #{elements} must be between 1 and 6" unless (1..6).include? elements
+    values
   end
 end
 
