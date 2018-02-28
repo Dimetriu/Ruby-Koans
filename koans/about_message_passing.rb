@@ -36,6 +36,7 @@ class AboutMessagePassing < Neo::Koan
     # THINK ABOUT IT:
     #
     # Why does Ruby provide both send and __send__ ?
+    # Some classes (for example the standard library's socket class) define their own send method which has nothing to do with Object#send. So if you want to work with objects of any class, you need to use __send__ to be on the safe side
   end
 
   def test_classes_can_be_asked_if_they_know_how_to_respond
